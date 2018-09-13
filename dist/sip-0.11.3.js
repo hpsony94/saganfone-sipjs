@@ -4859,7 +4859,7 @@ module.exports = function (SIP) {
           promise;
       // TODO: Should probably check state of the session
 
-      self.emit('reinvite', this);
+      self.emit('reinvite', this, request);
 
       if (request.hasHeader('P-Asserted-Identity')) {
         this.assertedIdentity = new SIP.NameAddrHeader.parse(request.getHeader('P-Asserted-Identity'));
