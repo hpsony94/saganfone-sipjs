@@ -4437,7 +4437,7 @@ module.exports = function (SIP) {
 
   ServerContext.prototype.reject = function (options) {
     options = Object.create(options || Object.prototype);
-    options.statusCode || (options.statusCode = 480);
+    options.statusCode || (options.statusCode = 486);
     options.minCode = 300;
     options.maxCode = 699;
     options.events = ['rejected', 'failed'];
